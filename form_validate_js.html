@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+
+    <form action="" method="post">
+        <label for="user">Username : </label>
+        <input type="text" name="user" id="user"><span >  </span>
+        <br><br>
+        <label for="mail">Email : </label>
+        <input type="email" name="mail" id="mail"><span >  </span>
+        <br><br>
+        <label for="pass">password : </label>
+        <input type="password" name="pass" id="pass"><span >  </span>
+        <br><br>
+        <label for="con">confirm password : </label>
+        <input type="password" name="con" id="con"><span >  </span>
+        <br><br>
+        <input type="submit">
+    </form>
+
+    <script>
+
+        let user = document.querySelector("input[name='user']");
+
+        let sub = document.querySelector("input[type='submit']");
+
+        let pass = document.querySelector("input[name='pass']");
+
+        let con = document.getElementById("con");
+
+        let inputs = document.querySelectorAll("input:not([name='con']):not([type='submit'])")
+
+
+        sub.addEventListener("click",(e)=>{
+            e.preventDefault();
+
+            for (let i of inputs) {
+
+            if(i.value==""){
+              i.nextElementSibling.textContent=` ${i.name} required `;
+            }else{
+                i.nextElementSibling.textContent="";
+            }
+     
+        }
+
+        if(con.value != pass.value){
+         
+            con.nextElementSibling.textContent =" confirm password doesnt match";
+
+        }
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+.container {
+    display: flex;text-align: center;justify-content: space-evenly;padding: 20px;
+}
+
+.product{
+    width: 30%;border: 1px solid gray;padding: 10px;
+}
+
+.product img{
+    width: 50%;
+}
+.product span{
+    display: block;margin-bottom: 3%;color: red;
+}
+
+.cart {
+    margin: 4% auto; border: 1px solid gray;width: 30%;text-align: center;
+}

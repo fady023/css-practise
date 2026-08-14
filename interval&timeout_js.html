@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     
+</head>
+<body>
+
+    <h1>welcome</h1>
+    <button onclick="create()">create</button>
+    <button onclick="resize()">resize</button>
+
+
+
+    <script>
+let x ;
+
+
+function create(){
+    x=window.open("","","height=300px,width=500px")
+}
+function resize(){
+    x.resizeTo(100,100)
+}
+
+
+
+/* window.addEventListener("mousemove",(e)=>{
+
+          document.body.innerHTML += e.clientX + " <br> "
+        }) */
+
+
+
+
+// window.setInterval(()=>{document.write("hello <br> ")},2000);
+
+/* window.setTimeout(()=>{
+    document.write("test <br> ")
+},1000) */
+
+
+
+    </script>
+    
+</body>
+</html>
