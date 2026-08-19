@@ -57,11 +57,36 @@ var list = document.querySelector(".list");
 class storage {
 
     static addtostorage(todoarray){
-        let storage = localStorage.setItem("todoarray",JSON.stringify(todoarray));
+        let storage = localStorage.setItem("todo",JSON.stringify(todoarray));
+        return storage;
+    }
+
+    static getstorage(){
+        let storage = localStorage.getItem("todo") == null ? []:JSON.parse(localStorage.getItem("todo"));
         return storage;
     }
 }
 
+let todoarray = storage.getstorage();
+
+class todo{
+    constructor(id,todo){
+        this.id = id;
+        this.todo = todo;
+    }
+}
+
+
+btn.addEventListener("click",(e)=>{
+    e.preventDefault();
+    let id_rand = Math.random()*1000;
+    let todo_obj = new todo(id_rand,inp.value);
+    todoarray = [...todoarray,todo_obj];
+
+
+
+
+})
 
 
 
