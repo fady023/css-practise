@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oop</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script>
+class user {
+    constructor(username,password){
+        this.name = username;
+        this.pass = password
+    }
+
+    #city ="fayoum";
+
+    get getcity(){
+        return this.#city
+    };
+    set setcity(ci){
+        this.#city=ci;
+    }
+
+    static go(){
+        document.write("hello from static")
+    }
+}
+
+class employee extends user{
+constructor(username,password,pos){
+super(username,password);
+this.position = pos;
+}
+
+}
+
+var emp = new employee("fed","ggd","hh");
+
+
+var new_user = new user("one","two");
+new_user.setcity="ae";
+
+console.log(new_user.getcity)
+
+    </script>
+</body>
+</html>
