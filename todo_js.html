@@ -79,9 +79,10 @@ class todo{
 
 btn.addEventListener("click",(e)=>{
     e.preventDefault();
-    let id_rand = Math.random()*1000;
+    let id_rand = MATH.round(Math.random()*1000);
     let todo_obj = new todo(id_rand,inp.value);
     todoarray = [...todoarray,todo_obj];
+    storage.addtostorage(todoarray);
 
 
 
