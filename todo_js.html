@@ -19,7 +19,7 @@
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            font-size: 23px;
+            font-size: 23px;border: 1px solid gray;
         }
 
         input {padding: 1%;}
@@ -49,6 +49,7 @@
 
     <script>
 
+// localStorage.clear();
 
 var inp = document.querySelector("input[type='text']");
 var btn = document.querySelector("input[type='submit']");
@@ -83,12 +84,30 @@ btn.addEventListener("click",(e)=>{
     let todo_obj = new todo(id_rand,inp.value);
     todoarray = [...todoarray,todo_obj];
     storage.addtostorage(todoarray);
+UI.displaydata();
 
 
 
 
 })
 
+class UI {
+    static displaydata(){
+
+        let displaydata = todoarray.map((item) => {
+
+            return  `
+             <div class="todo">
+                <p>${item.todo}</p>
+                <span>< class="fa-solid fa-xmark" data-id=${item.id}><//i></span>
+            </div> ` 
+        })
+
+        list.innerHTML = displaydata;
+
+    }
+}
+UI.displaydata();
 
 
     </script>
