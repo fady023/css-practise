@@ -116,8 +116,8 @@
         }
 
         static newarrwithoutremoved(outerid){
-            let newarr = todoarray.filter((item)=> item.id != outerid)
-            storage.addtostorage(newarr);
+             todoarray = todoarray.filter((item)=> item.id != outerid)
+            storage.addtostorage(todoarray);
         }
 
         static clearinp(){
