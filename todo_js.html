@@ -1,116 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
-        .container {
-            margin: 0 auto;
-            width: 50%;
-            border: 1px solid gray;
-            text-align: center;padding: 4%;
-        }
+      .container {
+        margin: 0 auto;
+        width: 50%;
+        border: 1px solid gray;
+        text-align: center;
+        padding: 4%;
+      }
 
-        form,.todo {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            font-size: 23px;border: 1px solid gray;
-        }
+      form,
+      .todo {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 23px;
+      }
 
-        input {padding: 1%;}
+      input {
+        padding: 1%;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
-        <h2>todo list</h2>
+      <h2>todo list</h2>
 
-        <form>
-            <input type="text" name="data">
-            <input type="submit">
-        </form>
+      <form>
+        <input type="text" name="data" />
+        <input type="submit" />
+      </form>
 
-        <div class="list">
-
-            <!-- <div class="todo">
+      <div class="list">
+        <!-- <div class="todo">
                 <p></p>
                 <span><i class="fa-solid fa-xmark"></i></span>
             </div> -->
-
-
-        </div>
+      </div>
     </div>
 
     <script>
 
-// localStorage.clear();
 
-var inp = document.querySelector("input[type='text']");
-var btn = document.querySelector("input[type='submit']");
-var list = document.querySelector(".list");
+      var inp = document.querySelector("input[type='text']");
+      var btn = document.querySelector("input[type='submit']");
+      var list = document.querySelector(".list");
 
-class storage {
+      class storage {
+        static addtostorage(todoarray) {
+          let storage = localStorage.setItem("todo", JSON.stringify(todoarray));
+          return storage;
+        }
 
-    static addtostorage(todoarray){
-        let storage = localStorage.setItem("todo",JSON.stringify(todoarray));
-        return storage;
-    }
+        static getstorage() {
+          let storage =
+            localStorage.getItem("todo") == null
+              ? []
+              : JSON.parse(localStorage.getItem("todo"));
+          return storage;
+        }
+      }
 
-    static getstorage(){
-        let storage = localStorage.getItem("todo") == null ? []:JSON.parse(localStorage.getItem("todo"));
-        return storage;
-    }
-}
+      let todoarray = storage.getstorage();
 
-let todoarray = storage.getstorage();
+      class todo {
+        constructor(id, todo) {
+          this.id = id;
+          this.todo = todo;
+        }
+      }
 
-class todo{
-    constructor(id,todo){
-        this.id = id;
-        this.todo = todo;
-    }
-}
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let id_rand = Math.round(Math.random() * 1000);
+        let todo_obj = new todo(id_rand, inp.value);
+        todoarray = [...todoarray, todo_obj];
+        storage.addtostorage(todoarray);
+        UI.displaydata();
+        UI.clearinp();
+      });
 
-
-btn.addEventListener("click",(e)=>{
-    e.preventDefault();
-    let id_rand = Math.round(Math.random()*1000);
-    let todo_obj = new todo(id_rand,inp.value);
-    todoarray = [...todoarray,todo_obj];
-    storage.addtostorage(todoarray);
-UI.displaydata();
-
-
-
-
-})
-
-class UI {
-    static displaydata(){
-
-        let displaydata = todoarray.map((item) => {
-
-            return  `
+      class UI {
+        static displaydata() {
+          let displaydata = todoarray.map((item) => {
+            return `
              <div class="todo">
                 <p>${item.todo}</p>
-                <span>< class="fa-solid fa-xmark" data-id=${item.id}><//i></span>
-            </div> ` 
-        })
+                <span><i class="fa-solid fa-xmark remove" data-id=${item.id}></i></span>
+            </div> `
+          })
 
-        list.innerHTML = displaydata;
+          list.innerHTML = displaydata
+        }
 
-    }
-}
+        static removetodo(){
+            list.addEventListener("click",(e)=>{
+                if(e.target.classList.contains("remove")){
+                    e.target.parentElement.parentElement.remove();
+                }
+                let trash_id = e.target.dataset.id;
+                UI.newarrwithoutremoved(trash_id)
+
+            })
+        }
+
+        static newarrwithoutremoved(outerid){
+            let newarr = todoarray.filter((item)=> item.id != outerid)
+            storage.addtostorage(newarr);
+        }
+
+        static clearinp(){
+            inp.value="";
+        }
+      }
 UI.displaydata();
-
-
+UI.removetodo();
+      
     </script>
-</body>
-
+  </body>
 </html>
