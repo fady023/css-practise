@@ -1,0 +1,32 @@
+- install Node.js   (to check node successful installment => node -v)
+- npx create-react-app  (proj_name  or ./ =>in same folder)   => happy Hacking means insalling finished
+- in terminal cd the folder
+- npm start
+- npm run dev (run project locally)
+
+* in App.js  function must return one tag only
+
+****************************
+
+components :
+- class component(we can control component lifecycle)
+
+
+- functional component 
+
+********************************
+npm install axios
+
+*****************************
+
+npm install react-router-dom
+
+*****************************
+
+npm i react-icons  
+
+*************************
+
+npm install @reduxjs/toolkit  (Logic Comp )
+
+npm install react-redux       (UI Comp)
