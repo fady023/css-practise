@@ -1,0 +1,15 @@
+.fed{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.fed div{
+     border: 1px solid red;
+    background-color: aliceblue;
+    border-radius: 50%;
+    padding: 7%;
+}
+.fed img{
+    width: 200px;
+    height: 200px;
+}

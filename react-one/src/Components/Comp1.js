@@ -1,11 +1,14 @@
 import React from "react";
-import comp1style from "./comp1.module.css"
+// import comp1style from "./comp1.module.css"
 
-const Comp1 = (pro)=>{
+
+const Comp1 = (props)=>{
   
     return(
-        <div className={comp1style.container}>
-            Hello from Comp1 
+        <div>
+           <img src={props.img} alt="" />
+           <h2>{props.name}</h2>
+           <p>{props.desc}</p>
         </div>
     )
 }
