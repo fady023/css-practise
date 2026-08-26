@@ -1,0 +1,12 @@
+h2{
+    background-color: lightblue;color: aliceblue;
+    padding: 1%;text-align: center;
+}
+
+.fed{
+    color: lightblue;background-color: lightcoral
+}
+
+.fedo{
+    background-color: blue;color: red;border: 1px solid red;
+}

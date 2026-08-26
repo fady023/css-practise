@@ -1,0 +1,7 @@
+.container{
+    color: red;
+    background-color: lightblue;
+    font-size: 33px;
+    padding: 2%;
+    border: 1px solid red;
+}
