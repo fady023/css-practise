@@ -1,0 +1,15 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    row-gap: 20px;
+}
+.pro {
+    width: 30%;
+    border: 1px solid gray;
+}
+.pro img{
+    width: 80%;
+}

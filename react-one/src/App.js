@@ -1,9 +1,10 @@
 
 import './App.css';
+import ApiComp from './Components/ApiComp';
 import ClassComp from './Components/ClassComp';
 import Comp1 from "./Components/Comp1";
 import FormHandling from './Components/FormHandling';
-// import FunctionalComp from './Components/FunctionalComp';
+import FunctionalComp from './Components/FunctionalComp';
 
 /* import img1 from "./imgs/cat1.jpg"
 import img2 from "./imgs/cat2.webp"
@@ -13,7 +14,8 @@ function App() {
 
   return (
     <div className=''>
-      <FormHandling />
+      <ApiComp />
+      {/* <FormHandling /> */}
       {/* <FunctionalComp /> */}
       {/* <ClassComp /> */}
     {/*   <Comp1 img={img1} name="cat1" desc="cat1 this is my cat to test"/>
