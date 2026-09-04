@@ -17,14 +17,14 @@
 /* .title{
     color: lightcoral;background-color: lightblue;
 } */
-
+body{margin: 0;}
 nav{
     background-color: lightblue;
     display: flex;
     align-items: center;
     justify-content: space-around;
     font-size: 25px;
-    padding: 0.3%;
+    padding: 0;margin: 0;
 
 }
 nav ul{
@@ -35,4 +35,9 @@ nav ul{
 }
 nav a{
     text-decoration: none;
+}
+.active{
+    background-color: gold;
+    padding: 4px;
+    /* display: inline-block; */
 }

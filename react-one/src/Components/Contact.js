@@ -1,9 +1,11 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 const Contact = () => {
   return (
     <>
-      <h1 className='title'>Contact page</h1>
+    <Navbar />
+      <h1>Contact page</h1>
     </>
   )
 }
