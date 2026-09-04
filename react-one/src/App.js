@@ -7,6 +7,7 @@ import FormHandling from './Components/FormHandling';
 import FunctionalComp from './Components/FunctionalComp';
 import {UserProvider} from "./Components/UserContext"
 import CompA from "./Components/CompA"
+import { Route, Routes } from 'react-router-dom';
 
 /* import img1 from "./imgs/cat1.jpg"
 import img2 from "./imgs/cat2.webp"
@@ -16,9 +17,13 @@ function App() {
 
   return (
     <div className=''>
-      <UserProvider value="fedo" >
+
+      <Routes >
+         <Route   path='' element ={}      />
+      </Routes>
+    {/*   <UserProvider value="fedo" >
         <CompA />
-      </UserProvider >
+      </UserProvider > */}
 
       {/* <ApiComp /> */}
       {/* <FormHandling /> */}
