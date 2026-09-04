@@ -13,3 +13,26 @@
     width: 200px;
     height: 200px;
 }
+
+/* .title{
+    color: lightcoral;background-color: lightblue;
+} */
+
+nav{
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 25px;
+    padding: 0.3%;
+
+}
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+  width: 30%;
+}
+nav a{
+    text-decoration: none;
+}
