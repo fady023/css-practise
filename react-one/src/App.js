@@ -5,13 +5,14 @@ import ClassComp from './Components/ClassComp';
 import Comp1 from "./Components/Comp1";
 import FormHandling from './Components/FormHandling';
 import FunctionalComp from './Components/FunctionalComp';
-import {UserProvider} from "./Components/UserContext"
+import { UserProvider } from "./Components/UserContext"
 import CompA from "./Components/CompA"
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useParams } from 'react-router-dom';
 import Home from './Components/Home';
 import About from './Components/About';
 import Contact from "./Components/Contact"
 import Pagenotfound from './Components/Pagenotfound';
+import SingleProduct from './Components/SingleProduct';
 
 /* import img1 from "./imgs/cat1.jpg"
 import img2 from "./imgs/cat2.webp"
@@ -19,17 +20,20 @@ import img3 from "./imgs/cat3.webp" */
 
 function App() {
 
+
   return (
     <div className=''>
 
       <Routes >
-         <Route   path='/'         element ={<Home />}      />
-         <Route   path='/about'    element={<About/>}    />
-         <Route   path='/contact'  element={<Contact />} />
-         <Route   path='*'         element={<Pagenotfound />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='*' element={<Pagenotfound />} />
+        <Route path='/products' element={<ApiComp />} />
+        <Route path='/products/:id' element={<SingleProduct />} />
       </Routes>
 
-    {/*   <UserProvider value="fedo" >
+      {/*   <UserProvider value="fedo" >
         <CompA />
       </UserProvider > */}
 

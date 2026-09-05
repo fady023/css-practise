@@ -31,7 +31,7 @@ nav {
     font-size: 25px;
     padding: 0;
     margin: 0;
-    font-weight: bold;color: white;
+    font-weight: bold;color: brown;
 
 }
 
@@ -43,7 +43,7 @@ nav ul {
 }
 
 nav a {
-    text-decoration: none;color: white;
+    text-decoration: none;color:  brown;
 }
 
 .active {
