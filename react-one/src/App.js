@@ -11,6 +11,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Components/Home';
 import About from './Components/About';
 import Contact from "./Components/Contact"
+import Pagenotfound from './Components/Pagenotfound';
 
 /* import img1 from "./imgs/cat1.jpg"
 import img2 from "./imgs/cat2.webp"
@@ -25,6 +26,7 @@ function App() {
          <Route   path='/'         element ={<Home />}      />
          <Route   path='/about'    element={<About/>}    />
          <Route   path='/contact'  element={<Contact />} />
+         <Route   path='*'         element={<Pagenotfound />} />
       </Routes>
 
     {/*   <UserProvider value="fedo" >

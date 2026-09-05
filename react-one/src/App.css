@@ -1,15 +1,17 @@
-.fed{
+.fed {
     display: flex;
     justify-content: space-between;
-   
+
 }
-.fed div{
-     border: 1px solid red;
+
+.fed div {
+    border: 1px solid red;
     background-color: aliceblue;
     border-radius: 50%;
     padding: 7%;
 }
-.fed img{
+
+.fed img {
     width: 200px;
     height: 200px;
 }
@@ -17,26 +19,34 @@
 /* .title{
     color: lightcoral;background-color: lightblue;
 } */
-body{margin: 0;}
-nav{
-    background-color: lightblue;
+body {
+    margin: 0;
+}
+
+nav {
+    background: linear-gradient(to right, rgb(42, 42, 173), lightblue);
     display: flex;
     align-items: center;
     justify-content: space-around;
     font-size: 25px;
-    padding: 0;margin: 0;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;color: white;
 
 }
-nav ul{
+
+nav ul {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
-  width: 30%;
+    width: 30%;
 }
-nav a{
-    text-decoration: none;
+
+nav a {
+    text-decoration: none;color: white;
 }
-.active{
+
+.active {
     background-color: gold;
     padding: 4px;
     /* display: inline-block; */
