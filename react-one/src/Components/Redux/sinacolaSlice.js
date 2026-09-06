@@ -4,7 +4,7 @@ const sinacolaState = {
     counter: 20
 }
 
-const sinaColaSlice = createSlice({
+export const sinaColaSlice = createSlice({
     name: "SinaCola",
     initialState: sinacolaState,
     reducers: {
