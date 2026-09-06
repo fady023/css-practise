@@ -13,6 +13,7 @@ import About from './Components/About';
 import Contact from "./Components/Contact"
 import Pagenotfound from './Components/Pagenotfound';
 import SingleProduct from './Components/SingleProduct';
+import SinaColaComp from "./Components/Redux/SinaColaComp"
 
 /* import img1 from "./imgs/cat1.jpg"
 import img2 from "./imgs/cat2.webp"
@@ -31,6 +32,7 @@ function App() {
         <Route path='*' element={<Pagenotfound />} />
         <Route path='/products' element={<ApiComp />} />
         <Route path='/products/:id' element={<SingleProduct />} />
+        <Route path='/sinacola' element ={<SinaColaComp />} />
       </Routes>
 
       {/*   <UserProvider value="fedo" >
