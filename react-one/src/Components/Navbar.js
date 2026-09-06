@@ -1,7 +1,9 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom"
-
+import { useSelector } from "react-redux";
 const Navbar = () => {
+    const num_of_sinacola = useSelector((state) => state.SinaCola.counter);
+
     return (
         <>
             <nav>
@@ -27,7 +29,7 @@ const Navbar = () => {
 
                     
                     <li>
-                        <NavLink to={"/sinacola"} > sinacola </NavLink>
+                        <NavLink to={"/sinacola"} > sinacola {num_of_sinacola}</NavLink>
                     </li>
                 </ul>
 
