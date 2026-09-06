@@ -11,10 +11,9 @@ const SinaColaComp = () => {
   return (
     <div>
         <Navbar />
-      <h1>counter : </h1>
+      <h1>counter : {num_of_sinacola}</h1>
       <button  onClick={()=>dispatch(sinaColaSlice.actions.orderSinaCola())}>order</button>
       <button  onClick={()=>dispatch(sinaColaSlice.actions.restockSinaCola())}>order</button>
-      <button  >restock</button>
     </div>
   )
 }
