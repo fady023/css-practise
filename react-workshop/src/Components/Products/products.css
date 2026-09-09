@@ -1,0 +1,17 @@
+.products{
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    gap: 10px;
+    text-align: center;
+}
+.pro{
+    width: 23%;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 1px gray;
+}
+.pro img{
+    width: 60%;
+}
