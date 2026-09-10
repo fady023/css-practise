@@ -3,6 +3,7 @@ import {Routes,Route} from "react-router-dom"
 import Products from "./Routes/Products"
 import SingleProduct from "./Routes/SingleProduct"
 import React from 'react'
+import Cart from "./Components/Redux/Cart"
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Route path="/" element={<Products />} />
       <Route path="/products" element={<Products />} />
       <Route path="/products/:id" element={<SingleProduct /> } />
+      <Route path="/cart" element ={<Cart />} />
     </Routes>
       
     </>

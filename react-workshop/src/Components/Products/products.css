@@ -11,7 +11,13 @@
     width: 23%;
     border: 1px solid gray;
     box-shadow: 1px 1px 1px gray;
+    height: 80vh;
 }
 .pro img{
     width: 60%;
+}
+.add{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
