@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
+import {Link} from "react-router-dom"
 import "./products.css"
 
 const ProductsComp = () => {
@@ -18,6 +19,7 @@ const ProductsComp = () => {
              <img src={el.thumbnail}  alt="" />
              <h3>{el.title}</h3>
              <p>{el.description}</p>
+             <Link to={`./products/${el.id}`} >Show more ..</Link>
           </div>
         ))
       }
