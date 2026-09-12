@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import "./navbar.css"
 const NavBar = () => {
     // const num_of_sinacola = useSelector((state) => state.SinaCola.counter);
-
+const products = useSelector((state)=> state.product.items);
     return (
         <>
             <nav>
@@ -22,7 +22,7 @@ const NavBar = () => {
                     </li>
 
                     <li>
-                      <NavLink to={"/Cart"}  > Cart </NavLink>
+                      <NavLink to={"/Cart"}  > Cart  {products.length}</NavLink>
                     </li>
 
                     

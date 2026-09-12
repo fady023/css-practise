@@ -1,22 +1,25 @@
-.products{
+.products {
     display: flex;
-    width: 90%;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    width: 90%;
     margin: 0 auto;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 20px;
     text-align: center;
 }
-.pro{
+
+.pro {
     width: 23%;
     border: 1px solid gray;
     box-shadow: 1px 1px 1px gray;
-    height: 40vh;
+    height: 300px;
 }
-.pro img{
-    width: 60%;
+
+.pro img {
+    width: 30%;
 }
-.add{
+
+.add {
     display: flex;
     justify-content: space-around;
     align-items: center;
